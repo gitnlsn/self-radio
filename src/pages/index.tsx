@@ -21,7 +21,10 @@ export default function Home() {
 
       <div className="my-4 grid max-w-4xl grid-cols-1 gap-4 lg:grid-cols-2">
         {listSongsQuery.data?.map((song) => (
-          <div className="flex flex-row justify-between gap-4 border-2 p-2 transition-all hover:border-slate-300">
+          <div
+            key={song}
+            className="flex flex-row justify-between gap-4 border-2 p-2 transition-all hover:border-slate-300"
+          >
             <p>{song}</p>
             <button
               onClick={async () => {
